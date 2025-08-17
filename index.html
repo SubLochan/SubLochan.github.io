@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lochan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Lochan</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hello, I'm <span class="highlight">Lochan</span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Developer & Software Engineer</p>
+                <p class="hero-description">
+                    Passionate about creating innovative solutions and building exceptional digital experiences.
+                    Always eager to learn new technologies and tackle challenging problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Here are some of my recent works</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce platform built with React and Node.js, featuring user authentication, 
+                            payment integration, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A cross-platform mobile application for task management with real-time synchronization, 
+                            built using React Native and Firebase.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Analytics Dashboard</h3>
+                        <p class="project-description">
+                            An interactive dashboard for visualizing complex data sets with real-time updates, 
+                            charts, and customizable filters.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="api">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Documentation">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RESTful API Service</h3>
+                        <p class="project-description">
+                            A scalable REST API built with microservices architecture, featuring JWT authentication, 
+                            rate limiting, and comprehensive documentation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Qualifications</h2>
+                <p class="section-subtitle">My academic background and certifications</p>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2020 - 2024</span>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="education-degree">Bachelor of Technology</h3>
+                        <h4 class="education-field">Computer Science & Engineering</h4>
+                        <p class="education-institution">University Name</p>
+                        <p class="education-description">
+                            Specialized in software development, data structures, algorithms, and system design. 
+                            Completed major projects in web development and machine learning.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">CGPA: 8.5/10</span>
+                            <span class="highlight-tag">Dean's List</span>
+                            <span class="highlight-tag">Final Year Project: AI-based System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2018 - 2020</span>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3 class="education-degree">Higher Secondary Certificate</h3>
+                        <h4 class="education-field">Science Stream (PCM)</h4>
+                        <p class="education-institution">School Name</p>
+                        <p class="education-description">
+                            Focused on Physics, Chemistry, and Mathematics. Developed strong analytical and 
+                            problem-solving skills that laid the foundation for engineering studies.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">95.2%</span>
+                            <span class="highlight-tag">State Topper</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2023</span>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="education-degree">AWS Certified Solutions Architect</h3>
+                        <h4 class="education-field">Cloud Computing</h4>
+                        <p class="education-institution">Amazon Web Services</p>
+                        <p class="education-description">
+                            Demonstrated expertise in designing distributed systems and applications on AWS platform. 
+                            Covers architectural best practices and cloud security.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">Associate Level</span>
+                            <span class="highlight-tag">Valid until 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2023</span>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="education-degree">Full Stack Web Development</h3>
+                        <h4 class="education-field">MERN Stack</h4>
+                        <p class="education-institution">Online Certification Program</p>
+                        <p class="education-description">
+                            Comprehensive training in MongoDB, Express.js, React, and Node.js. Built multiple 
+                            full-stack applications and learned modern development practices.
+                        </p>
+                        <div class="education-highlights">
+                            <span class="highlight-tag">600+ Hours</span>
+                            <span class="highlight-tag">10+ Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>lochan.example@email.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>City, State, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Connect with me</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Lochan. All rights reserved.</p>
+                <p>Built with ❤️ using HTML, CSS, and JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
