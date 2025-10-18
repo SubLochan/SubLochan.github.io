@@ -3,326 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lochan - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Lochan Sublari - Game Developer Portfolio</title>
+    <meta name="description" content="Game developer portfolio of Lochan Sublari, showcasing immersive gaming experiences built with Unity, Unreal Engine, and innovative gameplay mechanics.">
+    <meta name="author" content="Lochan Sublari">
+    
+    <meta property="og:title" content="Lochan Sublari - Game Developer Portfolio">
+    <meta property="og:description" content="Game developer portfolio of Lochan Sublari, showcasing immersive gaming experiences built with Unity, Unreal Engine, and innovative gameplay mechanics.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav>
         <div class="nav-container">
-            <div class="nav-logo">
-                <span>Sublari Lochan</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <a href="#" class="nav-logo" onclick="showSection('projects'); return false;">Lochan Sublari</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link active" onclick="showSection('projects'); return false;">Projects</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('about'); return false;">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('contact'); return false;">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
+        
+        <ul class="nav-links mobile" id="mobileNavLinks">
+            <li><a href="#" class="nav-link active" onclick="showSection('projects'); closeMobileMenu(); return false;">Projects</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('about'); closeMobileMenu(); return false;">About</a></li>
+            <li><a href="#" class="nav-link" onclick="showSection('contact'); closeMobileMenu(); return false;">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
+    <!-- Projects Section (Home) -->
+    <section id="projects" class="active">
+        <!-- Hero -->
+        <div class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Sublari Lochan</span>
-                </h1>
-                <p class="hero-subtitle">Game and Software Developer</p>
-                <p class="hero-description">
-    Aspiring Game Game design enthusiast with a Computer Science background,
-    passionate about building immersive worlds through code and creativity.
+                <h1>Lochan Sublari</h1>
+                <p class="subtitle">Crafting Immersive Gaming Experiences</p>
+                <p class="description">
+                    Passionate game developer with expertise in Unity, Unreal Engine, and innovative gameplay mechanics. 
+                    Bringing creative visions to life through code, design, and interactive storytelling.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                <div class="btn-group">
+                    <button class="btn btn-hero" onclick="scrollToProjects()">View Projects</button>
+                    <button class="btn btn-outline" onclick="showSection('contact')">Contact Me</button>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:developer@example.com">
+                        <i data-lucide="mail"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-card">
-                    <div class="card-glow"></div>
-                    <div class="profile-image">
-                        <img src="my_pic.jpg" alt="Profile">
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-section" id="projectsGrid">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>A showcase of my latest game development work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=600&fit=crop" alt="Mystic Forest Chronicles" class="project-image">
+                        <div class="project-content">
+                            <h3>Mystic Forest Chronicles</h3>
+                            <p>An immersive fantasy RPG featuring dynamic combat, magical abilities, and an expansive open world filled with ancient mysteries.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Shader Graph</span>
+                                <span class="tech-tag">AI Navigation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=600&fit=crop" alt="Neon Velocity" class="project-image">
+                        <div class="project-content">
+                            <h3>Neon Velocity</h3>
+                            <p>High-octane cyberpunk racing game with futuristic vehicles, customizable upgrades, and intense multiplayer competitions.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Unreal Engine</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Blueprints</span>
+                                <span class="tech-tag">Multiplayer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800&h=600&fit=crop" alt="Starbound Odyssey" class="project-image">
+                        <div class="project-content">
+                            <h3>Starbound Odyssey</h3>
+                            <p>Space exploration adventure with procedurally generated planets, resource gathering, and epic interstellar storylines.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Godot</span>
+                                <span class="tech-tag">GDScript</span>
+                                <span class="tech-tag">Procedural Gen</span>
+                                <span class="tech-tag">VFX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop" alt="Chromatic Dreams" class="project-image">
+                        <div class="project-content">
+                            <h3>Chromatic Dreams</h3>
+                            <p>Mind-bending puzzle platformer with unique color-based mechanics, challenging levels, and stunning visual aesthetics.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Particle Systems</span>
+                                <span class="tech-tag">Level Design</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2025 Lochan Sublari. All rights reserved.</p>
+        </footer>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                      I'm a Computer Science undergrad and passionate game developer focused on crafting immersive, multiplayer experiences.
-                       With hands-on expertise in C++, Unreal Engine, and Android game development, I love turning ideas into playable realities. 
-                       Whether it's debugging build errors, optimizing performance, or deploying projects to GitHub and the Play Store, 
-                      I thrive on solving real-world challenges and collaborating with others to bring games to life.
-                    </p>
-                    <div class="skills"> Skills
-                        <div class="skill-item">Unreal Engine </div>
-                        <div class="skill-item">Blender</div>
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">HTML,CSS,JavaScript</div>
-                        <div class="skill-item">JAVA</div>
-                        <div class="skill-item">C</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - 2027</div>
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <h4>Anurag University Ghatkesar</h4>
-                        <p>
-                            I am currently pursuing a Bachelor of Technology in Computer Science, entering my third year, 
-                            with a focus on game development and real-time systems.
-                        </p>
-                        <div class="achievements">
-                            <span class="achievement">GPA: 8.71 / 10.0</span>
-                            <span class="achievement">Game Development Club Technical Member</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 - 2023</div>
-                        <h3>Intermediate</h3>
-                        <h4>Urbane Junior College Nacharam</h4>
-                        <div class="achievements">
-                            <span class="achievement">Percentage: 84 %</span>
-                            <span class="achievement">Secured Counselling Seat in Anurag University</span>
-                        </div>
-                    </div>
+    <section id="about">
+        <div class="about-section">
+            <div class="container">
+                <div class="about-header">
+                    <h1>About Me</h1>
+                    <p>Game Developer | Creative Problem Solver | Interactive Storyteller</p>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021</div>
-                        <h3>Schooling</h3>
-                        <h4>Kendriya Vidhyalaya No 1 uppal</h4>
-                        <div class="achievements">
-                            <span class="achievement">CGPA 8.1/ 10.0</span>
-                        </div>
-                    </div>
+                <div class="card">
+                    <h2>My Journey</h2>
+                    <p>With over 5 years of experience in game development, I've had the privilege of working on diverse projects ranging from indie titles to AAA productions. My passion lies in creating immersive experiences that captivate players and push the boundaries of interactive entertainment.</p>
+                    <p>I specialize in gameplay programming, AI systems, and creating stunning visual effects that bring game worlds to life. Whether it's crafting complex combat mechanics or designing procedurally generated environments, I thrive on solving challenging technical problems.</p>
+                    <p>My approach combines technical excellence with creative vision, ensuring that every project delivers both performance and player engagement. I believe great games are built through iteration, collaboration, and a deep understanding of what makes interactive experiences memorable.</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-Commerce Platform">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15,3 21,3 21,9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
+                <div class="section-header">
+                    <h2>Skills & Expertise</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i data-lucide="gamepad-2"></i>
                             </div>
+                            <h3>Game Engines</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Godot</span>
+                            <span class="tech-tag">GameMaker</span>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Task Management App">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15,3 21,3 21,9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i data-lucide="code"></i>
                             </div>
+                            <h3>Programming</h3>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Socket.io</span>
-                            <span class="tech-tag">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Weather Dashboard">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15,3 21,3 21,9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>Beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics with data visualization.</p>
-                        <div class="project-tech">
+                        <div class="tech-tags">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">C++</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">API Integration</span>
-                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GDScript</span>
                         </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <h3>Design & Art</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">Shader Graph</span>
+                            <span class="tech-tag">Particle Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h3>Specialties</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Gameplay Mechanics</span>
+                            <span class="tech-tag">AI Systems</span>
+                            <span class="tech-tag">Multiplayer</span>
+                            <span class="tech-tag">VFX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Experience Highlights</h2>
+                    <div class="experience-item">
+                        <h3>Senior Game Developer</h3>
+                        <p class="role-info">Independent Studio | 2022 - Present</p>
+                        <p>Leading development of multiple indie titles, focusing on innovative gameplay mechanics and creating memorable player experiences.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Gameplay Programmer</h3>
+                        <p class="role-info">Game Studio XYZ | 2020 - 2022</p>
+                        <p>Developed core gameplay systems for action-adventure titles, implemented AI behaviors, and optimized performance for multiple platforms.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Junior Developer</h3>
+                        <p class="role-info">Creative Games Inc | 2019 - 2020</p>
+                        <p>Contributed to mobile game development, created UI systems, and assisted in implementing multiplayer features.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2025 Lochan Sublari. All rights reserved.</p>
+        </footer>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <div class="contact-content">
-                <div class="contact-info"> 
-                    <h3>Get in touch</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <span>sublarilochan123@gmail.com</span>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                            </div>
-                            <span>+91 7337019825</span>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <span>Boduppal, Hyderabad, Telangana</span>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                            </svg>
-                        </a>
-                    </div>
+    <section id="contact">
+        <div class="contact-section">
+            <div class="container">
+                <div class="about-header">
+                    <h1>Get In Touch</h1>
+                    <p>Let's collaborate on your next gaming project</p>
                 </div>
 
-               
+                <div class="contact-grid">
+                    <div class="card">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Project inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-hero" style="width: 100%; font-size: 1rem; padding: 0.875rem;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="card">
+                            <h2>Contact Information</h2>
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <p><strong>Email</strong></p>
+                                    <a href="mailto:developer@example.com">developer@example.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <p><strong>Phone</strong></p>
+                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <p><strong>Location</strong></p>
+                                    <p style="color: var(--muted-foreground);">San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h2>Social Links</h2>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i data-lucide="github"></i>
+                                <span>GitHub Profile</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                        </div>
+
+                        <div class="availability-card">
+                            <h3>Open for Opportunities</h3>
+                            <p>I'm currently available for freelance projects and full-time positions. Let's build something amazing together!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2025 Lochan Sublari. All rights reserved.</p>
+        </footer>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Sublari Lochan. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
 
-    <script src="script.js"></script>
+    <script src="main.js">
+  
+    </script>
 </body>
-
 </html>
